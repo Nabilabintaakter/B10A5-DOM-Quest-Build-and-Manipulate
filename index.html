@@ -27,7 +27,7 @@
                         clifford: '#da373d',
                         'btn-primary': '#B4F461',
                         'text-black': '#111111',
-                        'text-gray': 'rgba(17, 17, 17, 0.7)'
+                        'btn-border': 'rgba(17, 17, 17, 0.3)'
                     }
                 }
             }
@@ -36,29 +36,41 @@
 </head>
 
 <body class="font-lexend">
-    <header class="bg-[#F9F7F3] w-full">
-        <!-- for mobile device -->
-        <div class="flex justify-center items-center mb-6 pt-2 md:hidden">
-            <div class="flex gap-4 items-center">
-                <div class="w-7 h-7"><img class="w-full h-full" src="./assets/logo.png" alt="logo"></div>
-                <p class="text-black text-xl font-semibold">Donate Bangladesh</p>
+    <header class=" w-full">
+        <div class="bg-[#F9F7F3]">
+            <!-- for mobile device -->
+            <div class="flex justify-center items-center mb-6 pt-2 md:hidden">
+                <div class="flex gap-4 items-center">
+                    <div class="w-7 h-7"><img class="w-full h-full" src="./assets/logo.png" alt="logo"></div>
+                    <p class="text-black text-xl font-semibold">Donate Bangladesh</p>
+                </div>
+            </div>
+            <!-- for large device -->
+            <section class="container mx-auto flex justify-between items-center px-4 md:px-0 pb-3 md:pt-6 md:pb-16 ">
+                <div>
+                    <button
+                        class="rounded-lg bg-btn-primary text-black font-semibold text-base md:text-xl px-8 py-2 md:py-3 border-none">Blog</button>
+                </div>
+                <div class="hidden md:flex gap-4 items-center">
+                    <div class="w-12 h-12"><img class="w-full h-full" src="./assets/logo.png" alt="logo"></div>
+                    <p class="text-black text-xl font-semibold">Donate Bangladesh</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="w-7 h-7"><img class="w-full h-full" src="./assets/coin.png" alt="coin"></div>
+                    <p class="text-gray-600 text-xl font-medium"><span id="balance">5500</span> BDT </p>
+                </div>
+            </section>
+            <!-- donation and history tab -->
+            <div class="flex gap-4 items-center justify-center bg-white pt-6 pb-4 md:pt-12 md:pb-8 lg:pt-20">
+                <button
+                    class="rounded-lg bg-btn-primary text-black font-semibold text-base md:text-xl px-8 py-2 md:py-4 border-none">Donation
+                </button>
+                <button
+                    class="rounded-lg text-gray-600 font-medium text-base md:text-xl px-8 py-2 md:py-4 border-btn-border border-[1px]">History
+                </button>
             </div>
         </div>
-        <!-- for large device -->
-        <section class="container mx-auto flex justify-between items-center px-4 md:px-0 pb-3 md:pt-6 md:pb-16 ">
-            <div>
-                <button
-                    class="rounded-lg bg-btn-primary text-black font-semibold text-base md:text-xl px-8 py-2 md:py-3 border-none">Blog</button>
-            </div>
-            <div class="hidden md:flex gap-4 items-center">
-                <div class="w-12 h-12"><img class="w-full h-full" src="./assets/logo.png" alt="logo"></div>
-                <p class="text-black text-xl font-semibold">Donate Bangladesh</p>
-            </div>
-            <div class="flex gap-3 items-center">
-                <div class="w-7 h-7"><img class="w-full h-full" src="./assets/coin.png" alt="coin"></div>
-                <p class="text-gray-600 text-xl font-medium"><span id="balance">5500</span> BDT </p>
-            </div>
-        </section>
+
     </header>
     <main>
 

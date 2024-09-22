@@ -15,7 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .font-lexend{
+        .font-lexend {
             font-family: "Lexend", system-ui;
         }
     </style>
@@ -25,9 +25,9 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
-                        'btn-primary' : '#B4F461',
-                        'text-black' : '#111111',
-                        'text-gray' : 'rgba(17, 17, 17, 0.7)'
+                        'btn-primary': '#B4F461',
+                        'text-black': '#111111',
+                        'text-gray': 'rgba(17, 17, 17, 0.7)'
                     }
                 }
             }
@@ -36,7 +36,21 @@
 </head>
 
 <body class="font-lexend">
-
+    <header class="bg-[#F9F7F3]">
+        <section class="container mx-auto flex justify-between items-center pt-6 pb-16 ">
+            <div>
+                <button class="rounded-lg bg-btn-primary px-8 py-3 border-none">Blog</button>
+            </div>
+            <div class="flex gap-4 items-center">
+                <div class="w-12 h-12"><img class="w-full h-full" src="./assets/logo.png" alt="logo"></div>
+                <p class="text-black text-xl font-semibold">Donate Bangladesh</p>
+            </div>
+            <div class="flex gap-3 items-center">
+                <div class="w-7 h-7"><img class="w-full h-full" src="./assets/coin.png" alt="coin"></div>
+                <p class="text-gray-600 text-xl font-medium"><span id="balance">5500</span>BDT</p>
+            </div>
+        </section>
+    </header>
     <main>
 
     </main>

@@ -2,13 +2,13 @@
 
 // common function for 3 cards:
 // function-1
-function commonFunction(input, donation, balance) {
+function commonFunction(input, balance) {
     const amountFor = parseFloat(document.getElementById(input).value);
     const myBalanceField = document.getElementById(balance);
     const myBalance = myBalanceField.innerText;
     const newBalance = myBalance - amountFor;
     myBalanceField.innerText = newBalance;
-    return (newBalance);
+    return newBalance;
 }
 
 // function-2
@@ -26,8 +26,11 @@ function historyCard(amountFor, historyData) {
 // card-1:
 document.getElementById('btn-donate-noakhali').addEventListener('click', function () {
     const amountFor = parseFloat(document.getElementById('input-donation-noakhali').value);
-    commonFunction('input-donation-noakhali', 'donate-noakhali', 'my-balance');
-    
+    if (amountFor <= 0 || amountFor > (document.getElementById('my-balance').innerText) || isNaN(amountFor) || amountFor === "") {
+        alert('Invalid Donation Amount!');
+        return;
+    }
+    commonFunction('input-donation-noakhali', 'my-balance');
     const result = amountFor + parseFloat(document.getElementById('donate-noakhali').innerText);
     document.getElementById('donate-noakhali').innerText = result;
     const historyData = 'Flood Relief in Noakhali,';
@@ -38,7 +41,12 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
 // card-2:
 document.getElementById('btn-donate-feni').addEventListener('click', function () {
     const amountFor = parseFloat(document.getElementById('input-donation-feni').value);
-    commonFunction('input-donation-feni', 'donate-feni', 'my-balance');
+    if (amountFor <= 0 || amountFor > (document.getElementById('my-balance').innerText) || isNaN(amountFor) || amountFor === "") {
+        alert('Invalid Donation Amount!');
+        return;
+    }
+    commonFunction('input-donation-feni', 'my-balance');
+
     const result = amountFor + parseFloat(document.getElementById('donate-feni').innerText);
     document.getElementById('donate-feni').innerText = result;
     const historyData = 'Flood Relief in Feni,';
@@ -49,7 +57,12 @@ document.getElementById('btn-donate-feni').addEventListener('click', function ()
 // card-3:
 document.getElementById('btn-donate-quota').addEventListener('click', function () {
     const amountFor = parseFloat(document.getElementById('input-donation-quota').value);
-    commonFunction('input-donation-quota', 'donate-quota', 'my-balance');
+    if (amountFor <= 0 || amountFor > (document.getElementById('my-balance').innerText) || isNaN(amountFor) || amountFor === "") {
+        alert('Invalid Donation Amount!');
+        return;
+    }
+    commonFunction('input-donation-quota', 'my-balance');
+
     const result = amountFor + parseFloat(document.getElementById('donate-quota').innerText);
     document.getElementById('donate-quota').innerText = result;
     const historyData = 'Aid for Injured in the Quota Movement,';

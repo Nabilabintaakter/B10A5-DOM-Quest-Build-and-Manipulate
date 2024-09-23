@@ -113,3 +113,9 @@ donationTab.addEventListener('click', function () {
     document.getElementById('cards-container').classList.remove('hidden');
     document.getElementById('history-container').classList.add('hidden');
 })
+
+// add event listener to blog button
+
+document.getElementById('btn-blog').addEventListener('click', function(){
+    window.location.href = "./blog.html"
+})

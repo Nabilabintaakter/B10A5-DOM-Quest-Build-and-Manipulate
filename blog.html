@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- google font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- font awesome cdn -->
+    <script src="https://kit.fontawesome.com/5d47224317.js" crossorigin="anonymous"></script>
+    <!-- tailwind + daisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .font-lexend {
+            font-family: "Lexend", system-ui;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'btn-primary': '#B4F461',
+                        'text-black': '#111111',
+                        'btn-border': 'rgba(17, 17, 17, 0.3)',
+                        'card-border': 'rgba(17, 17, 17, 0.1)',
+                        'btn-secondary': 'rgba(17, 17, 17, 0.05)',
+                        'bg-footer': '#F9F7F3'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class=" w-full sticky top-0 backdrop-blur z-50 bg-white/30">
+        <div class="">
+            <!-- for mobile device only -->
+            <div class="bg-[#F9F7F3]/50 flex justify-center items-center mb-3 py-5 md:hidden">
+                <div class="flex gap-4 items-center">
+                    <div class="w-7 h-7"><img class="w-full h-full" src="./assets/logo.png" alt="logo"></div>
+                    <p class="text-black text-xl font-semibold">Donate Bangladesh</p>
+                </div>
+            </div>
+            <!-- for all devices -->
+            <div class="md:bg-[#F9F7F3]/50">
+                <section
+                    class="container mx-auto flex justify-between items-center px-4 md:px-0 pb-0 md:pt-6 md:pb-12 ">
+                    <div>
+                        <button id="btn-home"
+                            class="rounded-lg bg-btn-primary text-black font-semibold text-base md:text-xl px-8 py-2 md:py-3 border-none">Home</button>
+                    </div>
+                    <div class="hidden md:flex gap-4 items-center">
+                        <div class="w-12 h-12"><img class="w-full h-full" src="./assets/logo.png" alt="logo"></div>
+                        <p class="text-black text-xl font-semibold">Donate Bangladesh</p>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                        <div class="w-7 h-7"><img class="w-full h-full" src="./assets/coin.png" alt="coin"></div>
+                        <p class="text-gray-600 text-xl font-medium"><span id="my-balance">5500</span> BDT </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </header>
+    <script src="./js/blog.js"></script>
+</body>
+
+</html>

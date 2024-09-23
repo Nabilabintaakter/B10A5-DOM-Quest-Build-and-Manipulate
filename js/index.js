@@ -4,7 +4,6 @@
 // function-1
 function commonFunction(input, donation, balance) {
     const amountFor = parseFloat(document.getElementById(input).value);
-    document.getElementById(donation).innerText = amountFor;
     const myBalanceField = document.getElementById(balance);
     const myBalance = myBalanceField.innerText;
     const newBalance = myBalance - amountFor;
@@ -28,6 +27,9 @@ function historyCard(amountFor, historyData) {
 document.getElementById('btn-donate-noakhali').addEventListener('click', function () {
     const amountFor = parseFloat(document.getElementById('input-donation-noakhali').value);
     commonFunction('input-donation-noakhali', 'donate-noakhali', 'my-balance');
+    
+    const result = amountFor + parseFloat(document.getElementById('donate-noakhali').innerText);
+    document.getElementById('donate-noakhali').innerText = result;
     const historyData = 'Flood Relief in Noakhali,';
     const history = historyCard(amountFor, historyData);
     const historyContainer = document.getElementById('history-container')
@@ -37,6 +39,8 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
 document.getElementById('btn-donate-feni').addEventListener('click', function () {
     const amountFor = parseFloat(document.getElementById('input-donation-feni').value);
     commonFunction('input-donation-feni', 'donate-feni', 'my-balance');
+    const result = amountFor + parseFloat(document.getElementById('donate-feni').innerText);
+    document.getElementById('donate-feni').innerText = result;
     const historyData = 'Flood Relief in Feni,';
     const history = historyCard(amountFor, historyData);
     const historyContainer = document.getElementById('history-container')
@@ -46,6 +50,8 @@ document.getElementById('btn-donate-feni').addEventListener('click', function ()
 document.getElementById('btn-donate-quota').addEventListener('click', function () {
     const amountFor = parseFloat(document.getElementById('input-donation-quota').value);
     commonFunction('input-donation-quota', 'donate-quota', 'my-balance');
+    const result = amountFor + parseFloat(document.getElementById('donate-quota').innerText);
+    document.getElementById('donate-quota').innerText = result;
     const historyData = 'Aid for Injured in the Quota Movement,';
     const history = historyCard(amountFor, historyData);
     const historyContainer = document.getElementById('history-container')

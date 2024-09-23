@@ -18,6 +18,12 @@
         .font-lexend {
             font-family: "Lexend", system-ui;
         }
+        ::-webkit-scrollbar{
+            display: none;
+        }
+        *{
+            scrollbar-width: none;
+        }
     </style>
     <script>
         tailwind.config = {
@@ -38,7 +44,7 @@
     </script>
 </head>
 
-<body>
+<body class="font-lexend relative">
     <header class=" w-full sticky top-0 backdrop-blur z-50 bg-white/30">
         <div class="">
             <!-- for mobile device only -->
@@ -68,6 +74,69 @@
             </div>
         </div>
     </header>
+    <main class="mt-8 px-2">
+        <div class="container mx-auto bg-white">
+            <!-- Title -->
+            <div class="flex gap-3 ">
+                <h1 class="text-black text-3xl md:text-4xl font-extrabold">Important FAQ</h1>
+                <img class="w-12 h-12 md:w-14 md:h-14 relative -top-3 md:-top-4 animate-bounce"
+                    src="https://img.icons8.com/ios/50/ask-question--v1.png" alt="ask-question--v1" />
+            </div>
+            <!-- FAQs -->
+            <div class="join join-vertical w-full">
+                <div class="collapse collapse-arrow join-item border-base-300 border md:py-4">
+                    <input type="radio" name="my-accordion-4" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                    <div class="collapse-content">
+                        <p>Document Object Model (DOM) is an application programming interface for HTML document.
+                            JavaScript actually interacts with the html webpage through this DOM. And can manipulate the
+                            html elements easily. </p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border md:py-4">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                        <div class="space-y-3">
+                            <p>There are some important methods in JavaScript by which we can select a particular html
+                                element from the DOM. These are:
+                            <ul>
+                                <li>1. document.getElementById() : For selecting an element by id. </li>
+                                <li>2. document.getElementsByClassNames() : For selecting elements by class name. </li>
+                                <li>3. document.getElementsByTagName() : For selecting elements by tag name.</li>
+                            </ul>
+                            </p>
+                            <p>We can also select elements by css selectors from the DOM. These are:
+                            <ul>
+                                <li>4. document.querySelector(): for selecting the first element which matches the provided
+                                    css selector.</li>
+                                <li>5. document.querySelectorAll(): for selecting all the elements matching the provided
+                                    css selector.</li>
+                            </ul>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border md:py-4">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM,
+                        and why is it useful?</div>
+                    <div class="collapse-content">
+                        <p>Event delegation is a method by which we add an event listener to the parent node instead of its child nodes for preventing event bubbling. By doing this we can escape adding many event handlers to the child nodes.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border md:py-4">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and
+                        styles using the DOM?</div>
+                    <div class="collapse-content">
+                        <p>To manipulate an element's attribute, setAttribute() method is used. It has 2 parameters: attribute name and value. And we can use the style property for styling an element dynamically from DOM.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     <script src="./js/blog.js"></script>
 </body>
 

@@ -50,10 +50,10 @@
             </div>
             <!-- for all devices -->
             <div class="md:bg-[#F9F7F3]/50">
-                <section class="container mx-auto flex justify-between items-center px-4 md:px-0 pb-0 md:pt-6 md:pb-16 ">
+                <section
+                    class="container mx-auto flex justify-between items-center px-4 md:px-0 pb-0 md:pt-6 md:pb-16 ">
                     <div>
-                        <button
-                            id="btn-blog"
+                        <button id="btn-blog"
                             class="rounded-lg bg-btn-primary text-black font-semibold text-base md:text-xl px-8 py-2 md:py-3 border-none">Blog</button>
                     </div>
                     <div class="hidden md:flex gap-4 items-center">
@@ -68,12 +68,10 @@
             </div>
             <!-- donation and history tab -->
             <div class="w-full flex gap-4 items-center justify-center  pt-6 md:pt-12 pb-6 md:pb-8 lg:pt-20">
-                <button
-                    id="donation-tab"
+                <button id="donation-tab"
                     class="rounded-lg bg-btn-primary text-black font-semibold text-base md:text-xl px-8 py-2 md:py-4 border-none">Donation
                 </button>
-                <button
-                    id="history-tab"   
+                <button id="history-tab"
                     class="rounded-lg text-gray-600 font-medium text-base md:text-xl px-8 py-2 md:py-4 border-btn-border border-[1px]">History
                 </button>
             </div>
@@ -81,10 +79,9 @@
     </header>
     <main>
         <!-- cards-container -->
-        <section class="container mx-auto h-auto space-y-5 lg:space-y-8 px-2 mb-12 lg:mb-20">
+        <section class=" container mx-auto h-auto space-y-5 lg:space-y-8 px-2 mb-12 lg:mb-20">
             <!-- card-1 -->
-            <div
-                id="card-1"
+            <div id="card-1"
                 class="w-full border-[1px] border-card-border bg-white rounded-2xl h-auto lg:h-[540px] p-5 md:p-8 flex flex-col lg:flex-row gap-5 md:gap-8">
                 <!-- image -->
                 <div class="lg:w-1/2 h-full">
@@ -93,7 +90,7 @@
                 <!-- text content -->
                 <div class="lg:w-1/2 flex flex-col gap-4 lg:justify-between">
                     <button
-                        class="w-36 lg:w-[110px] bg-btn-secondary rounded-lg border-none px-4 py-[10px] flex gap-2 items-center">
+                        class="w-36 lg:w-fit bg-btn-secondary rounded-lg border-none px-4 py-[10px] flex gap-2 items-center">
                         <div class="w-6 h-6"><img class="w-full h-full" src="./assets/coin.png" alt=""></div>
                         <p class="text-base text-gray-600"><span id="donate-noakhali">0</span> BDT</p>
                     </button>
@@ -117,8 +114,7 @@
                 </div>
             </div>
             <!-- card-2 -->
-            <div
-            id="card-2"
+            <div id="card-2"
                 class="w-full border-[1px] border-card-border bg-white rounded-2xl h-auto lg:h-[540px] p-5 md:p-8 flex flex-col lg:flex-row gap-5 md:gap-8">
                 <!-- image -->
                 <div class="lg:w-1/2 h-auto">
@@ -127,7 +123,7 @@
                 <!-- text content -->
                 <div class="lg:w-1/2 flex flex-col gap-4 lg:justify-between">
                     <button
-                        class="w-36 lg:w-[110px] bg-btn-secondary rounded-lg border-none px-4 py-[10px] flex gap-2 items-center">
+                        class="w-36 lg:w-fit bg-btn-secondary rounded-lg border-none px-4 py-[10px] flex gap-2 items-center">
                         <div class="w-6 h-6"><img class="w-full h-full" src="./assets/coin.png" alt=""></div>
                         <p class="text-base text-gray-600"><span id="donate-feni">0</span> BDT</p>
                     </button>
@@ -146,16 +142,14 @@
                         donating.</p>
                     <input class="p-3 md:p-[18px] bg-white rounded-lg border-[1px] border-card-border w-full"
                         type="number" name="" id="input-donation-feni" placeholder="Write Donation Amount">
-                    <button 
-                        id="btn-donate-feni"
+                    <button id="btn-donate-feni"
                         class="rounded-lg bg-btn-primary text-black font-semibold text-base md:text-xl w-full py-2 md:py-4 border-none">Donate
                         Now
                     </button>
                 </div>
             </div>
             <!-- card-3 -->
-            <div
-            id="card-3"
+            <div id="card-3"
                 class="w-full border-[1px] border-card-border bg-white rounded-2xl h-auto lg:h-[540px] p-5 md:p-8 flex flex-col lg:flex-row gap-5 md:gap-8">
                 <!-- image -->
                 <div class="lg:w-1/2 h-auto ">
@@ -166,7 +160,7 @@
                 <!-- text content -->
                 <div class="lg:w-1/2 flex flex-col gap-4 lg:justify-between">
                     <button
-                        class="w-36 lg:w-[110px] bg-btn-secondary rounded-lg border-none px-4 py-[10px] flex gap-2 items-center">
+                        class="w-36 lg:w-fit bg-btn-secondary rounded-lg border-none px-4 py-[10px] flex gap-2 items-center">
                         <div class="w-6 h-6"><img class="w-full h-full" src="./assets/coin.png" alt=""></div>
                         <p class="text-base text-gray-600"><span id="donate-quota">0</span> BDT</p>
                     </button>
@@ -185,14 +179,17 @@
                         solidarity in their fight for justice. Every bit counts, so please consider contributing.</p>
                     <input class="p-3 md:p-[18px] bg-white rounded-lg border-[1px] border-card-border w-full"
                         type="number" name="" id="input-donation-quota" placeholder="Write Donation Amount">
-                    <button
-                        id="btn-donate-quota"
+                    <button id="btn-donate-quota"
                         class="rounded-lg bg-btn-primary text-black font-semibold text-base md:text-xl w-full py-2 md:py-4 border-none">Donate
                         Now
                     </button>
                 </div>
             </div>
         </section>
+        <!-- history section -->
+        <div id="history-container" class="container mx-auto h-auto space-y-4 md:space-y-6 px-2 mb-12 lg:mb-20">
+
+        </div>
     </main>
     <footer class="w-full bg-bg-footer h-16 md:h-20 lg:h-[100px]">
     </footer>

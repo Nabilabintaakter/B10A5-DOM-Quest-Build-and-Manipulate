@@ -23,13 +23,19 @@ function historyCard(amountFor, historyData) {
     return div;
 }
 
-// card-1:
+const myModal = document.getElementById('my-modal');
+const closeModal = document.getElementById('close-modal');
+
+// add event listener to card-1
 document.getElementById('btn-donate-noakhali').addEventListener('click', function () {
     const amountFor = parseFloat(document.getElementById('input-donation-noakhali').value);
+    
+// input validation
     if (amountFor <= 0 || amountFor > (document.getElementById('my-balance').innerText) || isNaN(amountFor) || amountFor === "") {
         alert('Invalid Donation Amount!');
         return;
     }
+    myModal.classList.add('modal-open');
     commonFunction('input-donation-noakhali', 'my-balance');
     const result = amountFor + parseFloat(document.getElementById('donate-noakhali').innerText);
     document.getElementById('donate-noakhali').innerText = result;
@@ -38,13 +44,18 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
     const historyContainer = document.getElementById('history-container')
     historyContainer.insertBefore(history, historyContainer.firstChild);
 })
-// card-2:
+
+// add event listener to card-2
+
 document.getElementById('btn-donate-feni').addEventListener('click', function () {
     const amountFor = parseFloat(document.getElementById('input-donation-feni').value);
+
+    // input validation
     if (amountFor <= 0 || amountFor > (document.getElementById('my-balance').innerText) || isNaN(amountFor) || amountFor === "") {
         alert('Invalid Donation Amount!');
         return;
     }
+    myModal.classList.add('modal-open');
     commonFunction('input-donation-feni', 'my-balance');
 
     const result = amountFor + parseFloat(document.getElementById('donate-feni').innerText);
@@ -54,13 +65,18 @@ document.getElementById('btn-donate-feni').addEventListener('click', function ()
     const historyContainer = document.getElementById('history-container')
     historyContainer.insertBefore(history, historyContainer.firstChild);
 })
-// card-3:
+
+// add event listener to card-3
+
 document.getElementById('btn-donate-quota').addEventListener('click', function () {
     const amountFor = parseFloat(document.getElementById('input-donation-quota').value);
+
+    // input validation
     if (amountFor <= 0 || amountFor > (document.getElementById('my-balance').innerText) || isNaN(amountFor) || amountFor === "") {
         alert('Invalid Donation Amount!');
         return;
     }
+    myModal.classList.add('modal-open');
     commonFunction('input-donation-quota', 'my-balance');
 
     const result = amountFor + parseFloat(document.getElementById('donate-quota').innerText);
@@ -70,9 +86,13 @@ document.getElementById('btn-donate-quota').addEventListener('click', function (
     const historyContainer = document.getElementById('history-container')
     historyContainer.insertBefore(history, historyContainer.firstChild);
 })
+// close modal for all cards:
+closeModal.addEventListener('click', function () {
+    myModal.classList.remove('modal-open');
+});
+
 
 // add event listener to donation and history tab:
-
 // history tab
 const historyTab = document.getElementById('history-tab');
 historyTab.addEventListener('click', function () {

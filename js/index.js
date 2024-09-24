@@ -96,20 +96,20 @@ closeModal.addEventListener('click', function () {
 // history tab
 const historyTab = document.getElementById('history-tab');
 historyTab.addEventListener('click', function () {
-    historyTab.classList.add('bg-btn-primary', 'text-black', 'font-semibold', 'border-none');
+    historyTab.classList.add('bg-btn-primary', 'text-black', 'font-semibold', 'border-none','hover:bg-[#93f712]');
     donationTab.classList.remove('bg-btn-primary', 'text-black', 'font-semibold', 'border-none');
-    historyTab.classList.remove('text-gray-600', 'font-medium', 'border-btn-border', 'border-[1px]');
-    donationTab.classList.add('text-gray-600', 'font-medium', 'border-btn-border', 'border-[1px]');
+    historyTab.classList.remove('text-gray-600', 'font-medium', 'border-btn-border', 'border-[1px]','hover:bg-gray-200');
+    donationTab.classList.add('text-gray-600', 'font-medium', 'border-btn-border', 'border-[1px]','hover:bg-gray-200');
     document.getElementById('history-container').classList.remove('hidden');
     document.getElementById('cards-container').classList.add('hidden');
 })
 // donation tab
 const donationTab = document.getElementById('donation-tab');
 donationTab.addEventListener('click', function () {
-    donationTab.classList.add('bg-btn-primary', 'text-black', 'font-semibold', 'border-none');
+    donationTab.classList.add('bg-btn-primary', 'text-black', 'font-semibold', 'border-none','hover:bg-[#93f712]');
     historyTab.classList.remove('bg-btn-primary', 'text-black', 'font-semibold', 'border-none');
-    donationTab.classList.remove('text-gray-600', 'font-medium', 'border-btn-border', 'border-[1px]');
-    historyTab.classList.add('text-gray-600', 'font-medium', 'border-btn-border', 'border-[1px]');
+    donationTab.classList.remove('text-gray-600', 'font-medium', 'border-btn-border', 'border-[1px]','hover:bg-gray-200');
+    historyTab.classList.add('text-gray-600', 'font-medium', 'border-btn-border', 'border-[1px]','hover:bg-gray-200');
     document.getElementById('cards-container').classList.remove('hidden');
     document.getElementById('history-container').classList.add('hidden');
 })
